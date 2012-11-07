@@ -1,0 +1,60 @@
+
+* Time dependence and dynamics with Cloudy
+
+** Tests
+
+*** Radiative energy conservation
+    CLOCK: [2012-11-06 Tue 19:20]--[2012-11-06 Tue 19:32] =>  0:12
+
++ For an infinite plane parallel slab, the total reprocessed flux radiated from the illuminated face should be equal to the incident flux.
++ There is already a file in the Cloudy test suite that does something very similar
+  + [[file:~/Work/CLOUDY/SVN/trunk/tsuite/experimental/orion_hii_pdr.in]]
+
+
+
+** Applications
+
+*** Globule ionization front
+
++ 
+*** Evaporating molecular disk
+
+
+** Emacs
+
+*** Major mode to edit Cloudy input files
+
++ The C-style comments and the fortan-style comments work
++ But the comments after a blank line do not
++ And neither do the keywords
+
+#+BEGIN_SRC emacs-lisp
+  (define-generic-mode cloudy-input-generic-mode
+    '(                                    ; Comment list
+      "//" 
+      ("/*" . "*/") 
+      )   
+    nil                                   ; Keyword list
+    '(                                    ; Font-lock list
+       ;; comments start with c or C as first character on line
+       ("^\\([cC] .*\\|[cC]\\)$" 1 font-lock-comment-face t)
+       ("^$\\(.*\\)\\'" 1 font-lock-comment-face t)
+       ;; keywords must be first word on line
+       (generic-make-keywords-list
+        '(
+          "title" "continuum" "table" "sphere" "aperture"
+          "stop" "constant" "double" "iterate"
+          "save" "print" "normalize" "end"
+          "grains" "abundances" "init" "hden" "set" 
+          )
+        font-lock-keyword-face "^")
+      )
+    '("\\.in\\'")                         ; Auto-mode list
+    nil                                   ; Function list
+    "Major mode for Cloudy input files."
+  )
+#+END_SRC
+
+#+RESULTS:
+: cloudy-input-generic-mode
+
