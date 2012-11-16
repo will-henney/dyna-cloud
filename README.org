@@ -1,0 +1,10 @@
+This is a bucket repo for holding experiments and tests related to "non-equilibrium" Cloudy models. 
+
+By "non-equilibrium" I mean either:
+
++ Explicitly time-dependent, \(d A/d t\) terms non-zero; or
++ Steady-state dynamics, \( \vec{\nabla} .( \vec{u} A ) \) terms non-zero
+
+Cloudy cannot do non-steady dynamics yet. 
+
+More details in [[file:dyna-cloud.org][dyna-cloud.org]]
