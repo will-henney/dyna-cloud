@@ -1,0 +1,65 @@
+=============Results of monitors: Cloudy (trunk, r6823M, experimental) Wed Nov  7 13:08:30 2012
+ Errors were found.  Summary follows.
+                   Label line    computed     asserted Rel Err Set err
+ ChkMonitor botch>>H  1  4861A     0.9678 =     0.4246  -1.279   0.050  <<BIG BOTCH!!
+ 
+ BIG BOTCHED MONITORS!!!   Big Botched Monitors!!! 
+###########################
+=============Results of monitors: Cloudy (trunk, r6823M, experimental) Wed Nov  7 13:10:05 2012
+ Errors were found.  Summary follows.
+                   Label line    computed     asserted Rel Err Set err
+ ChkMonitor botch>>H  1  4861A     0.9687 =     0.4246  -1.282   0.050  <<BIG BOTCH!!
+ 
+ BIG BOTCHED MONITORS!!!   Big Botched Monitors!!! 
+###########################
+=============Results of monitors: Cloudy (trunk, r6823M, experimental) Wed Nov  7 13:11:40 2012
+ Errors were found.  Summary follows.
+                   Label line    computed     asserted Rel Err Set err
+ ChkMonitor botch>>H  1  4861A     0.9648 =     0.4246  -1.272   0.050  <<BIG BOTCH!!
+ 
+ BIG BOTCHED MONITORS!!!   Big Botched Monitors!!! 
+###########################
+=============Results of monitors: Cloudy (trunk, r6823M, experimental) Wed Nov  7 13:13:09 2012
+ Errors were found.  Summary follows.
+                   Label line    computed     asserted Rel Err Set err
+ ChkMonitor botch>>H  1  4861A     0.6403 =     0.4246  -0.508   0.050  <<BIG BOTCH!!
+ 
+ BIG BOTCHED MONITORS!!!   Big Botched Monitors!!! 
+###########################
+=============Results of monitors: Cloudy (trunk, r6823M, experimental) Wed Nov  7 13:14:30 2012
+ Errors were found.  Summary follows.
+                   Label line    computed     asserted Rel Err Set err
+ ChkMonitor botch>>H  1  4861A     0.5181 =     0.4246  -0.220   0.050  <<BIG BOTCH!!
+ 
+ BIG BOTCHED MONITORS!!!   Big Botched Monitors!!! 
+###########################
+=============Results of monitors: Cloudy (trunk, r6823M, experimental) Wed Nov  7 13:15:50 2012
+ Errors were found.  Summary follows.
+                   Label line    computed     asserted Rel Err Set err
+ ChkMonitor botch>>H  1  4861A     0.4650 =     0.4246  -0.095   0.050 
+ 
+ BOTCHED MONITORS!!!   Botched Monitors!!! 
+###########################
+=============Results of monitors: Cloudy (trunk, r6823M, experimental) Wed Nov  7 13:17:07 2012
+ No errors were found.  Summary follows.
+                   Label line    computed     asserted Rel Err Set err
+ ChkMonitor ---    H  1  4861A     0.4411 =     0.4246  -0.039   0.050 
+ 
+###########################
+=============Results of monitors: Cloudy (trunk, r6823M, experimental) Wed Nov  7 13:18:13 2012
+ No errors were found.  Summary follows.
+                   Label line    computed     asserted Rel Err Set err
+ ChkMonitor        H  1  4861A     0.4297 =     0.4246  -0.012   0.050 
+ 
+###########################
+=============Results of monitors: Cloudy (trunk, r6823M, experimental) Wed Nov  7 13:19:18 2012
+ No errors were found.  Summary follows.
+                   Label line    computed     asserted Rel Err Set err
+ ChkMonitor        H  1  4861A     0.4244 =     0.4246   0.000   0.050 
+ 
+###########################
+=============Results of monitors: Cloudy (trunk, r6823M, experimental) Wed Nov  7 13:20:23 2012
+ No errors were found.  Summary follows.
+                   Label line    computed     asserted Rel Err Set err
+ ChkMonitor        H  1  4861A     0.4222 =     0.4246   0.006   0.050 
+ 

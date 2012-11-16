@@ -1,0 +1,95 @@
+                                              Cloudy (trunk, r6823M, experimental)
+                                                         www.nublado.org
+
+                       **************************************13Jan01**************************************
+                       *                                                                                 *
+                       * title constant density cooling cloud                                            *
+                       * c                                                                               *
+                       * c commands controlling continuum =========                                      *
+                       * c 3 keV                                                                         *
+                       * blackbody 3.4e7 K                                                               *
+                       * ionization parameter -10 time                                                   *
+                       * c coronal 3.4e7 K init time                                                     *
+                       * c                                                                               *
+                       * c commands for density & abundances =========                                   *
+                       * c want nT = 2e6 K cm-3                                                          *
+                       * hden 1e5 linear                                                                 *
+                       * c                                                                               *
+                       * c commands controlling geometry  =========                                      *
+                       * set dr 0                                                                        *
+                       * set nend 1                                                                      *
+                       * stop zone 1                                                                     *
+                       * c                                                                               *
+                       * c other commands for details     =========                                      *
+                       * c the time dependent calculations will start on iteration 3                     *
+                       * c first two are to relax the calculation                                        *
+                       * set dynamics relax 5                                                            *
+                       * c number of time steps                                                          *
+                       * iterate 300                                                                     *
+                       * c stop time when temperature falls below 1 K                                    *
+                       * time first timestep 9                                                           *
+DEBUG time dep 1.00e+10 1.00e+00 -1.00e+00 -1.00e+00
+DEBUG time dep 1.00e+11 1.00e+00 -1.00e+00 -1.00e+00
+DEBUG time dep 1.00e+20 1.00e+00 -1.00e+00 -1.00e+00
+
+                       * cosmic rays background                                                          *
+                       * c                                                                               *
+                       * c commands controlling output    =========                                      *
+                       * print line faint 2 log                                                          *
+                       * print line cumulative                                                           *
+                       * print ages                                                                      *
+                       * set save flush                                                                  *
+                       * save time dependent "time_cool_cd_injecto.tim" no hash                          *
+                       * save overview "time_cool_cd_injecto.ovr" no hash                                *
+                       * save cooling "time_cool_cd_injecto.col" no hash                                 *
+                       * save heating "time_cool_cd_injecto.het" no hash                                 *
+                       * save continuum units Angstroms "time_cool_cd_injecto.con"                       *
+                       * save cumulative continuum units Angstroms last "time_cool_cd_injecto.concum"    *
+                       * c                                                                               *
+                       * c commands giving the asserts    =========                                      *
+                       * c                                                                               *
+                       * c time_cool_cd_injecto.in                                                       *
+                       * c class dynamics                                                                *
+                       * c ========================================                                      *
+                       * c                                                                               *
+                       *                                                                                 *
+                       ***********************************************************************************
+
+
+
+Warning: duplicate reaction CH,O=>H,CO -- using new version
+Warning: duplicate reaction e-,CH2+=>H,CH -- using new version
+Warning: duplicate reaction e-,CH2+=>H2,C -- using new version
+Warning: duplicate reaction e-,CH3+=>H,H2,C -- using new version
+Warning: duplicate reaction e-,CH3+=>H,CH2 -- using new version
+Warning: duplicate reaction e-,CH3+=>H2,CH -- using new version
+Warning: duplicate reaction e-,CO+=>C,O -- using new version
+Warning: duplicate reaction H,CH=>H2,C -- using new version
+Warning: duplicate reaction H2,CO+=>H,HCO+ -- using new version
+Warning: duplicate reaction H2,CH2+=>H,CH3+ -- using new version
+Warning: duplicate reaction H2,C+=>PHOTON,CH2+ -- using new version
+Warning: duplicate reaction C2,N=>C,CN -- using new version
+Warning: duplicate reaction C+,CH=>H,C2+ -- using new version
+Warning: duplicate reaction C+,CH=>C,CH+ -- using new version
+Warning: duplicate reaction CH3+,O=>H2,HCO+ -- using new version
+Warning: duplicate reaction CH,N=>H,CN -- using new version
+Warning: duplicate reaction C+,NH=>H,CN+ -- using new version
+Warning: duplicate reaction e-,HCO+=>H,CO -- using new version
+Warning: duplicate reaction CRPHOT,C=>e-,C+ -- using new version
+Warning: duplicate reaction C+,OH=>H,CO+ -- using new version
+Warning: duplicate reaction C+,OH=>H+,CO -- using new version
+Warning: duplicate reaction H-,Li+=>H,Li -- using new version
+           5050CellPeak6.09E+02   Lo 1.00e-08=910.79cm   Hi-Con:7.89E+03 Ryd   E(hi):7.35E+06Ryd     E(hi):     100.01 MeV
+           I(nu>1ryd):  -2.4200   Average nu:5.817E+02   I( X-ray):  -2.4201   I(BalC): -10.7186     Phi(BalmrC):   0.0985
+           phi(1.0-1.8): 0.4777   phi(1.8-4.0):  1.229   phi(4.0-20):  2.723   phi(20--):  5.476     Ion pht flx:2.998E+05
+           I(gam ray): -14.2101   phi(gam r):  -7.4389   I(Infred): -12.5164   Alf(ox):   1.9401     Total inten:  -2.4200
+           U(1.0----):1.000E-10   U(4.0----):9.999E-11   T(En-Den):2.023E+00   T(Comp):3.246E+07     nuJnu(912A):5.847E-11
+           Occ(FarIR):2.691E-19   Occ(H n=6):9.726E-26   Occ(1Ryd):2.691E-27   Occ(4R):6.683E-28     Occ (Nu-hi):2.803E-45
+           Tbr(FarIR):4.263E-22   Tbr(H n=6):4.263E-22   Tbr(1Ryd):4.253E-22   Tbr(4R):4.223E-22     Tbr (Nu-hi):3.437E-36
+  
+ PROBLEM DISASTER - the kinetic temperature, 2.791e+00K, is below the lower limit of the code, 2.800e+00K.
+ Consider setting a lowest temperature with the SET TEMPERATURE FLOOR command.
+ This calculation is aborting.
+ Sorry.
+ Cloudy ends: 0 zone, 1 iteration, ABORT DISASTER PROBLEM, 1 warning.  ExecTime(s) 74.99
+ [Stop in cdMain at maincl.cpp:483, something went wrong]

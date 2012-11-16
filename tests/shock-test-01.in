@@ -1,0 +1,65 @@
+title Isothermal shock	
+c
+c commands controlling continuum =========
+blackbody 40000
+phi(h) 13.0
+brems 6
+phi(h) 10
+c
+c commands for density & abundances =========
+hden 4
+abundances hii region no grains
+grains orion no qheat single 
+c
+c commands controlling geometry  =========
+wind velo 20 km/s advection
+set dynamics shock depth 15
+c this accounts for matter beyond end of the model
+double optical depths
+sphere 
+// >>chng 06 jul 05, stop on AV rather than temperature */
+// >>chng 08 jul 01, from 15 to 5 
+stop depth linear 3e15
+c
+c other commands for details     =========
+iterate 30
+magnetic field -4 
+cosmic rays background 
+c this has no effect on dynamics, but is to desaturate the lines as per flow
+turbulence 8 km/sec no pressure
+c try to speed up simulation without hurting dynamics
+init "fast.ini"
+c use Bakes & Tielens heating
+set PAH Bakes 
+set save hash "return"
+* init "c84.ini"
+* failures 5
+c
+c commands controlling output    =========
+c want to print line intensities are surface brightness, per arcsec^2
+print lines surface brightness arcsec
+print diffuse continuum 
+print line faint -1.5
+save overview "shock-test-01.ovr"
+save hydrogen 21 cm "shock-test-01.21cm"
+save dr "shock-test-01.dr"
+save continuum last "shock-test-01.con" units microns
+save monitors last "shock-test-01.asr"
+save pressure "shock-test-01.pre"
+save heating "shock-test-01.het"
+save cooling "shock-test-01.col"
+save molecules "shock-test-01.mol"
+save wind "shock-test-01.wnd" last 
+//
+c dynamics_orion_recom.in
+c class dynamics hii pdr
+c ========================================
+c 
+
+This is a model similar in spirit to the blister geometry H+ region
+model computed by Baldwin et al. (1991), but with a D-critical flow.
+Many physical processes have been disabled to make this simulationn faster.
+Grain physics is not done so the gas temperature is incorrect.  The
+main purpose is to do a quick test of the dynamical flow with grain
+opacities included.  The slow directory contains a full simulation
+of a flow like Orion.

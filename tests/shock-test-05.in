@@ -1,0 +1,55 @@
+title Isothermal shock	- low ionization parameter
+c
+c commands controlling continuum =========
+blackbody 35000
+phi(h) 10.0
+brems 6
+phi(h) 8
+c
+c commands for density & abundances =========
+hden 3.5
+abundances hii region no grains
+grains orion no qheat single 
+c
+c commands controlling geometry  =========
+wind velo -5 km/s advection
+set dynamics shock depth 15
+set drmax 13
+set dynamics advection length fraction 0.1
+c this accounts for matter beyond end of the model
+double optical depths
+sphere 
+// >>chng 06 jul 05, stop on AV rather than temperature */
+// >>chng 08 jul 01, from 15 to 5 
+stop depth linear 1.2e15
+c
+c other commands for details     =========
+iterate 30
+magnetic field -4 
+cosmic rays background 
+c this has no effect on dynamics, but is to desaturate the lines as per flow
+turbulence 8 km/sec no pressure
+c try to speed up simulation without hurting dynamics
+init "fast.ini"
+c use Bakes & Tielens heating
+set PAH Bakes 
+set save hash "return"
+* init "c84.ini"
+* failures 5
+c
+c commands controlling output    =========
+c want to print line intensities are surface brightness, per arcsec^2
+print lines surface brightness arcsec
+print diffuse continuum 
+print line faint -1.5
+save overview ".ovr"
+save dr ".dr"
+save pressure ".pre"
+save heating ".het"
+save cooling ".col"
+save wind ".wnd" 
+//
+
+This is one of a series of models, designed to test 
+stationary low Mach number shocks in photoionized gas
+

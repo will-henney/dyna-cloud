@@ -1,0 +1,35 @@
+ monitor error: lgCheckMonitors could not find a line with label +Col  5876A
+ monitor error: The "save line labels" command is a good way to get a list of line labels.
+
+ monitor error: lgCheckMonitors could not find a line with label +Col  3889A
+ monitor error: The "save line labels" command is a good way to get a list of line labels.
+
+ monitor error: lgCheckMonitors could not find a line with label +Col  7065A
+ monitor error: The "save line labels" command is a good way to get a list of line labels.
+
+=============Results of monitors: Cloudy (trunk, r6823M, experimental) Wed Nov  7 13:16:56 2012
+ Errors were found.  Summary follows.
+                   Label line    computed     asserted Rel Err Set err
+ ChkMonitor botch>>totl  4861A   -11.4028 =   -11.3500   0.115   0.050 
+ ChkMonitor        CaBo  4861A     1.0000 =     1.0000   0.000   0.050 
+ ChkMonitor -----  he 1  5876A     0.0951 =     0.0908  -0.048   0.050 
+ ChkMonitor botch>>+Col  5876A     0.0000 =     0.1270 100000.000   0.050 
+ ChkMonitor -      He 1  3889A     0.0813 =     0.0801  -0.015   0.050 
+ ChkMonitor botch>>+Col  3889A     0.0000 =     0.1050 100000.000   0.050 
+ ChkMonitor botch>>He 1  7065A     0.0246 =     0.0273   0.099   0.050 
+ ChkMonitor botch>>+Col  7065A     0.0000 =     0.0331 100000.000   0.050 
+ ChkMonitor botch>>totl 1.083m     0.7278 =     0.8420   0.136   0.050 
+ ChkMonitor botch>>totl  2326A     0.1646 =     0.2500   0.341   0.100  <<BIG BOTCH!!
+ ChkMonitor botch>>totl  1909A     0.2363 =     0.2746   0.140   0.100 
+ ChkMonitor botch>>n  2  6584A     0.4005 =     0.4970   0.194   0.100 
+ ChkMonitor        totl  3727A     0.6569 =     0.6680   0.017   0.100 
+ ChkMonitor ----   o  3  5007A     4.3219 =     4.1330  -0.046   0.050 
+ ChkMonitor botch>>ne 2 12.81m     0.1300 =     0.1746   0.256   0.050  <<BIG BOTCH!!
+ ChkMonitor botch>>HHei      0     0.0640 =     0.0161   0.048   0.020 
+ ChkMonitor botch>>vel       0   102.4397 =    -0.1300 788.998   0.050  <<BIG BOTCH!!
+ ChkMonitor botch>>itrz      0    45.8561 =   100.1000   0.542   0.020  <<BIG BOTCH!!
+ ChkMonitor botch>>zone      0   410.0000 =   582.0000   0.296   0.010  <<BIG BOTCH!!
+ 
+ BIG BOTCHED MONITORS!!!   Big Botched Monitors!!! 
+
+

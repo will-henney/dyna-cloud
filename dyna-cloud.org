@@ -3,6 +3,11 @@
 
 ** Tests
 
+*** Stationary shocks
+
+
+
+
 *** Radiative energy conservation
     CLOCK: [2012-11-06 Tue 19:20]--[2012-11-06 Tue 19:32] =>  0:12
 
@@ -12,11 +17,17 @@
 
 
 
+
+
 ** Applications
+
+*** Low Mach number shocks in photoionized gas
+
+Needed as sub-grid model of line emission for our turbulence studies
+
 
 *** Globule ionization front
 
-+ 
 *** Evaporating molecular disk
 
 
@@ -37,8 +48,9 @@
     nil                                   ; Keyword list
     '(                                    ; Font-lock list
        ;; comments start with c or C as first character on line
-       ("^\\([cC] .*\\|[cC]\\)$" 1 font-lock-comment-face t)
+       ("^\\([cC\\*]\\( .*\\|\\)\\)$" 1 font-lock-comment-face t)
        ("^$\\(.*\\)\\'" 1 font-lock-comment-face t)
+       ("^\\(title\\|continuum\\|table\\|sphere\\|aperture\\)" 1 font-lock-keyword-face prepend) 
        ;; keywords must be first word on line
        (generic-make-keywords-list
         '(
